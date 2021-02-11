@@ -100,7 +100,7 @@
             android:layout_marginTop="16dp"
             android:onClick="submitOrder"
             android:text="@string/order"
-            android:textSize="16sp" />
+            android:textSize="14sp" />
 
     </LinearLayout>
 
