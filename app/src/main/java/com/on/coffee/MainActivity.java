@@ -24,8 +24,8 @@ public class MainActivity extends AppCompatActivity {
     private TextView mQuantityTextView;
     private CheckBox mWhipCheckBox;
     private CheckBox mChocolateCheckBox;
+    private CheckBox mMailCheckBox;
     private View mNameEditText;
-
 
 
     @Override
@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         mQuantityTextView = findViewById(R.id.quantity_text_view);
         mWhipCheckBox = findViewById(R.id.whip_checkbox);
         mChocolateCheckBox = findViewById(R.id.chocolate_checkbox);
+        mMailCheckBox = findViewById(R.id.mail_checkbox);
         mNameEditText = findViewById(R.id.name_edit_text);
     }
 
@@ -77,8 +78,14 @@ public class MainActivity extends AppCompatActivity {
 //        Intent intent = new Intent(Intent.ACTION_CALL,uri);
 //        startActivity(intent);
 
-        String[] addresses = new String[] {"on.siwon@gmail.com"};
-        composeEmail(addresses, "커피주문 test",null, message);
+        if (mMailCheckBox.isChecked()){
+            String[] addresses = new String[] {"on.siwon@gmail.com"};
+            composeEmail(addresses, "커피주문 test",null, message);
+        }else {
+            Toast.makeText(this, price  + " 원 결제 완료", Toast.LENGTH_SHORT).show();
+        }
+
+
     }
 
     public void composeEmail(String[] addresses, String subject, Uri attachment,String text) {
