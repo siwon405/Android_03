@@ -9,6 +9,16 @@
     tools:context=".MainActivity">
 
 
+    <EditText
+        android:id="@+id/name_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#CAECFB"
+        android:hint="Name"
+        android:textColorHint="#CAECFB"
+        android:singleLine="true" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -16,14 +26,29 @@
         android:textSize="18sp"
         android:text="TOPPINGS" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
     <CheckBox
-        android:id="@+id/topping_checkbox"
+        android:id="@+id/whip_checkbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:buttonTint="#90CAF9"
         android:text="Whipped cream"
         android:textColor="#C5CD74"
         android:textSize="16sp"/>
+
+    <CheckBox
+        android:id="@+id/chocolate_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="#90CAF9"
+        android:text="Chocolate"
+        android:textColor="#C5CD74"
+        android:textSize="16sp"/>
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -100,7 +125,11 @@
             android:layout_marginTop="16dp"
             android:onClick="submitOrder"
             android:text="@string/order"
-            android:textSize="14sp" />
+            android:textSize="16sp"
+            android:layout_gravity="right"/>
+
+
+
 
     </LinearLayout>
 
